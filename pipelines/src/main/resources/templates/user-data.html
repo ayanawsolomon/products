@@ -1,0 +1,34 @@
+<html xmlns:th="http://thymeleaf.org">  
+    <table>  
+        <tr>  
+            <td><h4>Product ID: </h4></td>  
+            <td><h4 th:text="${productRecord.id}"></h4></td>  
+        </tr>  
+        <tr>  
+            <td><h4>Product Name: </h4></td>  
+            <td><h4 th:text="${productRecord.prodName}"></h4></td>  
+        </tr>  
+        
+          <tr>  
+            <td><h4>Product Description: </h4></td>  
+            <td><h4 th:text="${productRecord.prodDesc}"></h4></td>  
+        </tr>  
+        <tr>  
+            <td><h4>Product Name: </h4></td>  
+            <td><h4 th:text="${productRecord.prodPrice}"></h4></td>  
+        </tr>  
+        
+         <tr>  
+            <td><h4>Product Image: </h4></td>  
+            <td><h4 th:text="${productRecord.prodImage}"></h4></td>  
+        </tr>  
+    </table> 
+    
+    <div class="col-sm-12">
+    <table class="table table-hover">
+        <tr th:each="productRecord ${productRecord.prodImage}">
+            <td th:text="${productRecord.id}">1</td> 
+        </tr>
+    </table>
+</div> 
+</html>  
