@@ -41,7 +41,7 @@ public class ProductService {
 		productRepository.delete(id);
 		return "product " + id + " has deleted";
 	}
-	public String post(ProductRecord product) {
+	public String save(ProductRecord product) {
 		productRepository.save(product);
 		return product.getId() + " has saved successfully";
 	}

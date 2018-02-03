@@ -24,7 +24,7 @@ public class HomeController {
    
     @RequestMapping(value="/save", method=RequestMethod.POST)  
     public ModelAndView save(@ModelAttribute ProductRecord productRecord){
-    	productService.post(productRecord);
+    	productService.save(productRecord);
     
         ModelAndView modelAndView = new ModelAndView();  
 modelAndView.setViewName("user-data");      

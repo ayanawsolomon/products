@@ -43,7 +43,7 @@ public class ProductController {
  
     @RequestMapping(method=RequestMethod.POST, value="/products")
     public String save(@RequestBody ProductRecord product) {
-    	return productService.post(product);
+    	return productService.save(product);
 
     }
     @RequestMapping(method=RequestMethod.PUT, value="/products/{id}")
