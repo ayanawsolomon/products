@@ -14,33 +14,35 @@ public class ProductController {
 
     @Autowired
     ProductService productService;
-
+// to get all products http://myIPAddress/products
     @RequestMapping(method=RequestMethod.GET, value="/products")
     public List<ProductRecord> product() {
         return productService.getAll();
     }
-
+// to get a product by ID you should use http://myIPAddress/products/id/IDOFAProduct
     @RequestMapping(method=RequestMethod.GET, value="/products/id/{id}")
     public List<ProductRecord> show(@PathVariable String id) {
         return productService.getByID(id);
     }
 
-    
+    // to get all products by name
     @RequestMapping(method=RequestMethod.GET, value="/products/name/{name}")
     public List<ProductRecord> showByName(@PathVariable String name) {
         return productService.getByName(name);
     }
+    // get all products by price 
     @RequestMapping(method=RequestMethod.GET, value="/products/price/{price}")
     public List<ProductRecord> showByPrice(@PathVariable Double price) {
         return productService.getByPrice(price);
     }
     
+    // to get all products by description 
     @RequestMapping(method=RequestMethod.GET, value="/products/desc/{desc}")
     public List<ProductRecord> showByDesc(@PathVariable String desc) {
         return productService.getByDesc(desc);
     }
     
- 
+ // to post product send product detail through http://MyIPAddress/products
     @RequestMapping(method=RequestMethod.POST, value="/products")
     public String save(@RequestBody ProductRecord product) {
     	return productService.save(product);
@@ -63,4 +65,6 @@ public class ProductController {
         return productService.deleteAll();
    
     }
+    
+  
 }
