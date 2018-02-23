@@ -20,7 +20,7 @@ public class HomeController {
     public String index(){  
         return"index";  
     }  
-    // this is to save your data
+    // this is to save your data from web input to mongodb
    
     @RequestMapping(value="/save", method=RequestMethod.POST)  
     public ModelAndView save(@ModelAttribute ProductRecord productRecord){
