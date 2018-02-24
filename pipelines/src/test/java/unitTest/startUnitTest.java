@@ -1,4 +1,4 @@
-package unitTest;
+/*package unitTest;
 
 import static org.junit.Assert.*;
 
@@ -15,3 +15,4 @@ public class startUnitTest {
 	}
 
 }
+*/
