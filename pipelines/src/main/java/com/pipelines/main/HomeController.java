@@ -21,7 +21,9 @@ public class HomeController {
         return"index";  
     }  
     // this is to save your data from web input to mongodb.
-    // added a comment  solomoooooooooooooooooooooooooooooo
+    // added a comment  solomooooooooooooooooooooooooooooo
+    // I have added a new featuer on home controller
+    // comment added by ANNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNAAAAAAAAAAAAAAaa
    
     @RequestMapping(value="/save", method=RequestMethod.POST)  
     public ModelAndView save(@ModelAttribute ProductRecord productRecord){
