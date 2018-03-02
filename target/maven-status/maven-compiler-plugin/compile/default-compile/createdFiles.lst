@@ -1,0 +1,7 @@
+com\pipelines\main\UserRecord.class
+com\pipelines\main\ProductRepository.class
+com\pipelines\main\PipelinesApplication.class
+com\pipelines\main\ProductController.class
+com\pipelines\main\HomeController.class
+com\pipelines\main\ProductService.class
+com\pipelines\main\ProductRecord.class

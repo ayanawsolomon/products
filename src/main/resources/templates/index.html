@@ -1,0 +1,43 @@
+<html lang="en">  
+    <head>  
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    
+        <title>Index Page</title>  
+    </head>  
+    <body >  
+    <div data-ng-app="">
+       <h1> <label for="id2">Product ID "{{name}}"</label></h1>
+        <input type="text" name="id2" data-ng-model="name" ></input> 
+</div>
+        <form action="save" method="post">  
+            <table>  
+            
+                               
+             <!--   <tr>  
+                    <td><label for="id">Product ID</label></td>  
+                    <td><input type="text" name="id"  ></input></td>  
+                </tr>   -->
+                <tr>  
+                    <td><label for="prodName">Product Name</label></td>  
+                    <td><input type="text" name="prodName"></input></td>  
+                </tr>  
+                 <tr>  
+                    <td><label for="prodDesc">Description </label></td>  
+                    <td><input type="text" name="prodDesc"></input></td>  
+                </tr>  
+                <tr>  
+                    <td><label for="prodPrice">Price</label></td>  
+                    <td><input type="text" name="prodPrice"></input></td>  
+                </tr> 
+                 <tr>  
+                    <td><label for="prodImage">Image URL</label></td>  
+                    <td><input type="text" name="prodImage"></input></td>  
+                </tr>  
+                <tr>  
+                    <td></td>  
+                    <td><input type="submit" value="Submit"></input></td>  
+                </tr>  
+            </table>  
+        </form>  
+    </body>  
+</html>  

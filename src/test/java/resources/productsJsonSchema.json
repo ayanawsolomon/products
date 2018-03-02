@@ -1,0 +1,24 @@
+{
+   "$schema":"http://json-schema.org/draft-04/schema#",
+   "type":"object",
+   "description":"CEP information",
+   "properties":{
+      "id":{
+         "type":"string"
+      },
+      "prodName":{
+         "type":"string"
+      },
+      "prodDesc":{
+         "type":"string"
+      },
+      "prodPrice":{
+         "type":"int"
+      }
+   },
+   "required":[
+      "id",
+      "prdName",
+      "prodPrice"
+   ]
+}
