@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,13 +16,21 @@ public class ProductController {
     @Autowired
     ProductService productService;
 // to get all products http://myIPAddress/products
-    @RequestMapping(method=RequestMethod.GET, value="/products")
-    public List<ProductRecord> product() {
-        return productService.getAll();
+    @RequestMapping(method=RequestMethod.GET, value="/products" )
+    public List<ProductRecord> product(@RequestHeader(value="h1" )String h1) {
+    	System.out.println(h1 + "=========================================================================");
+    	if(h1.contains("premium")) {
+            return productService.getByName("java");
+
+    	}else {
+            return productService.getAll();
+    		
+    	}
     }
 // to get a product by ID you should use http://myIPAddress/products/id/IDOFAProduct
     @RequestMapping(method=RequestMethod.GET, value="/products/id/{id}")
     public List<ProductRecord> show(@PathVariable String id) {
+    	
         return productService.getByID(id);
     }
 

@@ -1,6 +1,6 @@
 stepDefinitions\PUTproducts.class
 com\pipelines\main\RunnerCucumber.class
 stepDefinitions\GETproducts.class
+unitTest\GetByNameTest.class
 resources\MongoDBParser.class
 com\pipelines\main\PipelinesApplicationTests.class
-unitTest\GetByNameTest.class
